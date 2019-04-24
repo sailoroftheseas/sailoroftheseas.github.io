@@ -14,6 +14,7 @@
 
 <style>
 
+
 a { color: black; }
 
 
@@ -23,7 +24,6 @@ color: white;
 
 }
 .assignments{
-
 background-color: green;
 padding:20px;
 margin-left: 100px;
@@ -59,15 +59,18 @@ text-align:center;
 
 @media only screen and (max-width: 37.5em) {
 
+  .column {
+    width: 55px;
+    float: none !important;
+  }
+
   .assignments {
-  
-  background: orange;
-  padding:5px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  
+    background: orange;
+    padding:5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   
   img {
@@ -121,89 +124,125 @@ text-align:center;
 	height: 25%;
   
   }
-  
 } 
 
+/* Create three equal columns that floats next to each other */
+.column {
+  overflow: auto;
+  display: table-row;
+  float: left;
+  width: 45%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+/*  display: table-cell;*/
+/*  text-align: center;*/
+/*  float: left;*/
+/*  width: 250px;*/
+/*  min-height: 150px;*/
+/*    margin: 22px;*/
+/*margin-left: auto;*/
+  content: "";
+  display: table;
+  clear: both;
+}
+
 </style>
-
 </head>
-
-
 <body style="background-color:grey;">
-
 <h1>Home Page</h1>
-
 <div class="assignments">
-<ul>
-	<li><a href="#media_queries_page">Media Queries Portfolio Page</a></li>
-	<li><a href="#skeleton_assignment">Resume using skeleton</a></li>
-	<li><a href="#bootstrap_assignment">Bootstrap Website</a></li>
-	<li><a href="#sass_assignment">SASS</a></li>
-  <li><a href="#industry_exploration_assignment">Industry Exploration</a></li>
-	<li><a href="#git_repository_assignment">Git Repository</a></li>
-
-</ul>
+  <ul>
+  	<li><a href="#media_queries_page">Media Queries Portfolio Page</a></li>
+  	<li><a href="#skeleton_assignment">Resume using skeleton</a></li>
+  	<li><a href="#bootstrap_assignment">Bootstrap Website</a></li>
+  	<li><a href="#sass_assignment">SASS</a></li>
+    <li><a href="#industry_exploration_assignment">Industry Exploration</a></li>
+  	<li><a href="#git_repository_assignment">Git Repository</a></li>
+  </ul>
 </div>
 
 <h2>Assignments</h2>
-
 <div id="wrapper">
-<div id="media_queries_page">
-<img src="qrcode.51429278.png" alt="placeholder image">
-<p>Assignment: Media Queries Portfolio Page</p>
+<div class="row">  
+  <div class="column assignment_title">
+    <div id="media_queries_page">
+    <img src="qrcode.51429278.png" alt="placeholder image">
+    <p>Assignment: Media Queries Portfolio Page</p>
+    </div>
+  </div>
+
+<div class="column resume_section">
+  <div id="skeleton_assignment">
+  <img src="resume_icon.png" alt="placeholder image">
+  <p><a href="https://sailoroftheseas.github.io/Skeleton-Resume/">Link to resume</a><p>
+  <p>Assignment: Resume Using Skeleton</p>
+  <p> Description: Making a responsive Resume using the Skeleton Boilerplate css</p>
+  <p> Reflection: <br> <br> Skeleton is great for making responsive, mobile-friendly websites. Skeleton can help you quickly develop websites that look great at any size.  A great part about Skeleton is that is extremely easy to learn and use. For me it was easy to center and format content using the grid system. It's very easy to create a custom formatted website. All you have to do is use the container and row class, then use the preset classes to specify where certain content will be. Then it automatically resizes the content for you based on screen size. It also automatically styles elements such as button, table, and form to look much better than if you were just using html. Using skeleton is easier than using media quieries because the skeleton css grid system class automatically resizies content.  It is really convienient. You dont have to worry about creating classes and divs and then edit them each individually when styling in different media quieres.  However some of its weaknesses is that it does seem better for smaller projects.  Adittonally, updating may cause conflicts with your code. And if you dont update, you may risk falling behind.  Also, Skeleton has a limited number of templates, components and styles.  And skeleton doesn't give any javascript.
+    </p>
+  </div>
+</div>
+
+<div class="column bootstrap_section">
+  <div id="bootstrap_assignment">
+  <img src="pictureofanapple.jpeg" alt="placeholder image">
+  <p>Assignment: Flexbox Assignment</p>
+  <p> Description:  Create a responsive web page with Flexbox </p>
+  <p> Reflection: <br> Flexbox makes it easy to create a fluid, responsive layout.  Flexbox is great because it saves you from writing lots of extra code to style items.  Consequently, using Flexbox will save you time and can make your code more clean and easier to read.  With just a few lines of code you can easily arrange, scale, order, align, wrap, and collapse items, without having to write a ton of css styling or complex computations.  Additionally, Flexbox is great because you can make certain items respond to what available space is left on the page.  You can simply allocate a certain amount of space that an item can take up.  Moreover, Flexbox can tell items to distribute space evenly. Flexbox is also good for easily centering elements, and controlling vertical and horizontal alignment.  In my opinion I don’t see any downsides to using Flexbox.  It's a great skill to know when programming websites. The only con I see is that Flexbox can be a bit confusing to learn.</p>
+  </div>
+</div>
+
+
+<div class="column bootstrap_section">
+  <div id="bootstrap_assignment">
+  <img src="pictureofanapple.jpeg" alt="placeholder image">
+  <p>Assignment: Bootstrap Website</p>
+  <p> Description:</p>
+  <p> Reflection:</p>
+  </div>
+</div>
+
+
+
+<div class="column SASS_section">
+  <div id="sass_assignment">
+  <img src="pictureofanapple.jpeg" alt="placeholder image">
+  <p>Assignment: SASS</p>
+  <p> Description:</p>
+  <p> Reflection:</p>
+  </div>
+</div>
+
+
+
+<div class="column exploration_section">
+  <div id="industry_exploration_assignment">
+  <img src="pictureofanapple.jpeg" alt="placeholder image">
+  <p>Assignment: Industry Exploration</p>
+  <p> Description:</p>
+  <p> Reflection:</p>
+  </div>
+</div>
+
+<div class="column git_section">
+  <div id="git_repository_assignment">
+  <img src="pictureofanapple.jpeg" alt="placeholder image">
+  <p>Assignment: Git Repository</p>
+  <p> Description:</p>
+  <p> Reflection:</p>
+  </div>
+</div>
+<!--  End Row Div -->
 </div>
 <br>
 
-<br>
-
-<div id="skeleton_assignment">
-<img src="resume_icon.png" alt="placeholder image">
-<p><a href="https://github.com/sailoroftheseas/Skeleton-Resume/blob/master/index.html">Link to resume</a><p>
-<p>Assignment: Resume Using Skeleton</p>
-<p> Description: Making a responsive Resume using the Skeleton Boilerplate css</p>
-<p> Reflection: <br> <br> Skeleton is great for making responsive, mobile-friendly websites. Skeleton can help you quickly develop websites that look great at any size.  A great part about Skeleton is that is extremely easy to learn and use. For me it was easy to center and format content using the grid system. It's very easy to create a custom formatted website. All you have to do is use the container and row class, then use the preset classes to specify where certain content will be. Then it automatically resizes the content for you based on screen size. It also automatically styles elements such as button, table, and form to look much better than if you were just using html. Using skeleton is easier than using media quieries because the skeleton css grid system class automatically resizies content.  It is really convienient. You dont have to worry about creating classes and divs and then edit them each individually when styling in different media quieres.  However some of its weaknesses is that it does seem better for smaller projects.  Adittonally, updating may cause conflicts with your code. And if you dont update, you may risk falling behind.  Also, Skeleton has a limited number of templates, components and styles.  And skeleton doesn't give any javascript.
- </p>
+<div>
+  <p> DPR 241 Progress: <meter value="20" min="0" max="60"> </meter> </p>
 </div>
 
-<br>
-
-<div id="bootstrap_assignment">
-<img src="pictureofanapple.jpeg" alt="placeholder image">
-<p>Assignment: Bootstrap Website</p>
-<p> Description:</p>
-<p> Reflection:</p>
-</div>
-
-<br>
-
-<div id="sass_assignment">
-<img src="pictureofanapple.jpeg" alt="placeholder image">
-<p>Assignment: SASS</p>
-<p> Description:</p>
-<p> Reflection:</p>
-</div>
-<br>
-
-<div id="industry_exploration_assignment">
-<img src="pictureofanapple.jpeg" alt="placeholder image">
-<p>Assignment: Industry Exploration</p>
-<p> Description:</p>
-<p> Reflection:</p>
-</div>
-
-<br>
-
-<div id="git_repository_assignment">
-<img src="pictureofanapple.jpeg" alt="placeholder image">
-<p>Assignment: Git Repository</p>
-<p> Description:</p>
-<p> Reflection:</p>
-</div>
-
-<br>
-
-<p> DPR 241 Progress: <meter value="20" min="0" max="60"> </meter> </p>
 </div>
 </body>
-
 </html>
